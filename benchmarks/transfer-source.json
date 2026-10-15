@@ -1,0 +1,8 @@
+{
+  "schema": "eah.benchmark.v1", "name": "Source experience pilot", "observation_mode": "state",
+  "max_steps": 600, "max_skill_calls": 3,
+  "cases": [
+    {"id": "source-soup-0", "split": "development", "task_id": 0, "layout_mode": "expanded_reset", "layout_seed": 401, "jitter_m": 0.05},
+    {"id": "source-soup-1", "split": "development", "task_id": 0, "layout_mode": "expanded_reset", "layout_seed": 402, "jitter_m": 0.05}
+  ]
+}

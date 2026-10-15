@@ -1,0 +1,567 @@
+{
+  "schema": "eah.benchmark_summary.v1",
+  "episodes": 6,
+  "successes": 3,
+  "success_rate": 0.5,
+  "implementation_errors": 0,
+  "by_split": {
+    "evaluation": {
+      "episodes": 6,
+      "successes": 3,
+      "success_rate": 0.5
+    }
+  },
+  "by_task": {
+    "insert_round": {
+      "episodes": 2,
+      "successes": 1,
+      "success_rate": 0.5
+    },
+    "insert_square": {
+      "episodes": 2,
+      "successes": 0,
+      "success_rate": 0.0
+    },
+    "stack": {
+      "episodes": 2,
+      "successes": 2,
+      "success_rate": 1.0
+    }
+  },
+  "rows": [
+    {
+      "schema": "eah.benchmark_episode.v1",
+      "evidence_kind": "simulator_execution",
+      "case": {
+        "id": "evaluation-w0-insert_square-0",
+        "backend": "manufacturing",
+        "task_id": "insert_square",
+        "split": "evaluation",
+        "task_family": "insertion",
+        "layout_mode": "seeded",
+        "layout_seed": 2000363566,
+        "world_id": "world-0",
+        "physics": {
+          "actuation_gain": 0.989810059146196,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.015253759311070583
+      },
+      "success": false,
+      "simulator_success": false,
+      "termination": "agent_stop",
+      "error": null,
+      "steps": 399,
+      "skill_calls": 1,
+      "wall_seconds": 13.968000000109896,
+      "initial_state_sha256": "80ae282dec72f58dd4236c106734c7f88279e0e112cac30d6d956ea73e41de58",
+      "instruction": "Insert the square peg into the square hole and release it.",
+      "context_mode": "physical_context",
+      "context_bytes": 159,
+      "context_sha256": "d73282b93334465bcc57278a3f644183dbca91a53bb5a09676f54fd3d2b4bf14",
+      "calls": [
+        {
+          "index": 0,
+          "decision": {
+            "type": "skill",
+            "name": "insert",
+            "arguments": {
+              "motion_scale": 1.0,
+              "grasp_offset_m": 0.015
+            }
+          },
+          "start_step": 0,
+          "feedback": {
+            "status": "completed",
+            "object_lift_m": 0.1482649813348923,
+            "lateral_error_m": 0.009282703330972683,
+            "motion_scale": 1.0
+          },
+          "end_step": 399
+        }
+      ],
+      "peak_wrist_force_N": 9.879834412281157,
+      "evaluation_metrics": {
+        "insertion_depth_m": -0.009993643305459932,
+        "lateral_error_m": 0.009517480106997498,
+        "axis_up_z": -0.0023577883227770963,
+        "tilt_deg": 90.13509144504651,
+        "cross_section_margin_m": null,
+        "released": true
+      },
+      "video": "<project>/runs/release-v06-transfer/language_only/evaluation-w0-insert_square-0/rollout.mp4",
+      "video_sha256": "fe66916a309f6b7a06abf4b27a6b70957da523577da1ec28121a304a6a8073ab",
+      "trajectory_sha256": "43c5d619bee6431bee79b38460fdeb5aa22a830f82450fe7df69b506651418ff",
+      "initial_state_file_sha256": "e3b2f4589f0091aef4b7788a96d6d6094be1168e829d3b82891c75b57b4d9a9d",
+      "task_metric_contract": {
+        "metric_version": "eah.metrics.v2",
+        "task_predicate": "released; upright axis_z > 0.995; tip depth 18..34 mm; tip lateral offset < opening minus peg radius/half-side; positive cross-section clearance at engaged wall planes",
+        "success_hold_control_steps": 5,
+        "success_hold_sample_span_s": 0.2,
+        "scope": "Fixed coarse simulation task specification, not manufacturing certification"
+      },
+      "final_success_hold_steps": 0,
+      "simulated_seconds": 19.95,
+      "metric_version": "eah.metrics.v2",
+      "force_limit_N": null,
+      "force_limit_basis": null,
+      "force_metric_status": "diagnostic_only",
+      "force_limit_pass": null,
+      "force_qualified_success": null,
+      "force_measurement": {
+        "source": "robosuite raw end-effector force sensor",
+        "frame": "eef_sensor",
+        "sample_rate_hz": 20,
+        "statistic": "maximum sampled Euclidean force norm over executed control steps",
+        "compensated": false,
+        "interpretation": "Raw simulated wrist load; includes dynamic/load effects. Not isolated contact force, continuous-time peak, or safety certification."
+      },
+      "init_asset_sha256": "0969694ea87ca9e05cb74c78dd81c95808c04a0c2694b3a37241c65f5687c01d"
+    },
+    {
+      "schema": "eah.benchmark_episode.v1",
+      "evidence_kind": "simulator_execution",
+      "case": {
+        "id": "evaluation-w0-stack-0",
+        "backend": "manufacturing",
+        "task_id": "stack",
+        "split": "evaluation",
+        "task_family": "stacking",
+        "layout_mode": "seeded",
+        "layout_seed": 880891515,
+        "world_id": "world-0",
+        "physics": {
+          "actuation_gain": 0.989810059146196,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.0144862354727657
+      },
+      "success": true,
+      "simulator_success": true,
+      "termination": "agent_stop",
+      "error": null,
+      "steps": 265,
+      "skill_calls": 1,
+      "wall_seconds": 9.452999999979511,
+      "initial_state_sha256": "365397fc132bede42a1121797c66e70a222df5d0b36177e46d42b853c3eb3ba6",
+      "instruction": "Stack the small block on the large block and release it.",
+      "context_mode": "physical_context",
+      "context_bytes": 159,
+      "context_sha256": "d73282b93334465bcc57278a3f644183dbca91a53bb5a09676f54fd3d2b4bf14",
+      "calls": [
+        {
+          "index": 0,
+          "decision": {
+            "type": "skill",
+            "name": "stack",
+            "arguments": {
+              "motion_scale": 1.0,
+              "grasp_offset_m": 0.015
+            }
+          },
+          "start_step": 0,
+          "feedback": {
+            "status": "completed",
+            "object_lift_m": 0.2014097760358895,
+            "lateral_error_m": 0.0010755333753277277,
+            "motion_scale": 1.0
+          },
+          "end_step": 265
+        }
+      ],
+      "peak_wrist_force_N": 6.28757034951392,
+      "evaluation_metrics": {
+        "lateral_error_m": 0.0007737289098937143,
+        "object_height_m": 0.8695976781016852,
+        "released": true
+      },
+      "video": "<project>/runs/release-v06-transfer/language_only/evaluation-w0-stack-0/rollout.mp4",
+      "video_sha256": "8b1f090455b41d3596030d56264a6a77d0a2e4188e9dbb544f8386f73be78e34",
+      "trajectory_sha256": "02cc2a0b28472b8c6d4706a5097d47c95d1f6e26fca375a2451e7a9cf6b73b61",
+      "initial_state_file_sha256": "fd55836cab48e96305d31f6d144d9ca3e63e3ee69657669a2614cd061db0e0aa",
+      "task_metric_contract": {
+        "metric_version": "eah.metrics.v2",
+        "task_predicate": "robosuite 1.4 Stack contact/lift/release predicate",
+        "success_hold_control_steps": 5,
+        "success_hold_sample_span_s": 0.2,
+        "scope": "Fixed coarse simulation task specification, not manufacturing certification"
+      },
+      "final_success_hold_steps": 94,
+      "simulated_seconds": 13.25,
+      "metric_version": "eah.metrics.v2",
+      "force_limit_N": null,
+      "force_limit_basis": null,
+      "force_metric_status": "diagnostic_only",
+      "force_limit_pass": null,
+      "force_qualified_success": null,
+      "force_measurement": {
+        "source": "robosuite raw end-effector force sensor",
+        "frame": "eef_sensor",
+        "sample_rate_hz": 20,
+        "statistic": "maximum sampled Euclidean force norm over executed control steps",
+        "compensated": false,
+        "interpretation": "Raw simulated wrist load; includes dynamic/load effects. Not isolated contact force, continuous-time peak, or safety certification."
+      },
+      "init_asset_sha256": "58dc91e26b6d1ba05bb8d0ca8b3e8f744a0f3ac543df47a52cb28467982218d8"
+    },
+    {
+      "schema": "eah.benchmark_episode.v1",
+      "evidence_kind": "simulator_execution",
+      "case": {
+        "id": "evaluation-w0-insert_round-0",
+        "backend": "manufacturing",
+        "task_id": "insert_round",
+        "split": "evaluation",
+        "task_family": "insertion",
+        "layout_mode": "seeded",
+        "layout_seed": 783209919,
+        "world_id": "world-0",
+        "physics": {
+          "actuation_gain": 0.989810059146196,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.013516325442051171
+      },
+      "success": false,
+      "simulator_success": false,
+      "termination": "agent_stop",
+      "error": null,
+      "steps": 390,
+      "skill_calls": 1,
+      "wall_seconds": 14.031000000191852,
+      "initial_state_sha256": "50b254ec24e9493440e3503b6b73f786261ea59d1120b6fe6bf3a4b0944ff0bd",
+      "instruction": "Insert the round peg into the round hole and release it.",
+      "context_mode": "physical_context",
+      "context_bytes": 159,
+      "context_sha256": "d73282b93334465bcc57278a3f644183dbca91a53bb5a09676f54fd3d2b4bf14",
+      "calls": [
+        {
+          "index": 0,
+          "decision": {
+            "type": "skill",
+            "name": "insert",
+            "arguments": {
+              "motion_scale": 1.0,
+              "grasp_offset_m": 0.015
+            }
+          },
+          "start_step": 0,
+          "feedback": {
+            "status": "completed",
+            "object_lift_m": 0.146583780445118,
+            "lateral_error_m": 0.055279868017384444,
+            "motion_scale": 1.0
+          },
+          "end_step": 390
+        }
+      ],
+      "peak_wrist_force_N": 13.262773615248317,
+      "evaluation_metrics": {
+        "insertion_depth_m": 0.02370937314421928,
+        "lateral_error_m": 0.0520988950881899,
+        "axis_up_z": -0.00204566070383036,
+        "tilt_deg": 90.11720780639247,
+        "cross_section_margin_m": null,
+        "released": true
+      },
+      "video": "<project>/runs/release-v06-transfer/language_only/evaluation-w0-insert_round-0/rollout.mp4",
+      "video_sha256": "fc4851a338d1eb3db78cd17f2957571fe07b3ffa7e9250e3627d95e321e0c810",
+      "trajectory_sha256": "413f5ec03e026f7c5f0f910b9c41df605cbaccbabbb6d699b6602f8ddf074706",
+      "initial_state_file_sha256": "4ab1419d8f4751da131a94b57c2dbfa4be80053f1215efc338b62537f00864f9",
+      "task_metric_contract": {
+        "metric_version": "eah.metrics.v2",
+        "task_predicate": "released; upright axis_z > 0.995; tip depth 18..34 mm; tip lateral offset < opening minus peg radius/half-side; positive cross-section clearance at engaged wall planes",
+        "success_hold_control_steps": 5,
+        "success_hold_sample_span_s": 0.2,
+        "scope": "Fixed coarse simulation task specification, not manufacturing certification"
+      },
+      "final_success_hold_steps": 0,
+      "simulated_seconds": 19.5,
+      "metric_version": "eah.metrics.v2",
+      "force_limit_N": null,
+      "force_limit_basis": null,
+      "force_metric_status": "diagnostic_only",
+      "force_limit_pass": null,
+      "force_qualified_success": null,
+      "force_measurement": {
+        "source": "robosuite raw end-effector force sensor",
+        "frame": "eef_sensor",
+        "sample_rate_hz": 20,
+        "statistic": "maximum sampled Euclidean force norm over executed control steps",
+        "compensated": false,
+        "interpretation": "Raw simulated wrist load; includes dynamic/load effects. Not isolated contact force, continuous-time peak, or safety certification."
+      },
+      "init_asset_sha256": "b5dd391157f67575d62b09994709e721647ef4966e96b6ae90eb2cf025719907"
+    },
+    {
+      "schema": "eah.benchmark_episode.v1",
+      "evidence_kind": "simulator_execution",
+      "case": {
+        "id": "evaluation-w1-insert_round-0",
+        "backend": "manufacturing",
+        "task_id": "insert_round",
+        "split": "evaluation",
+        "task_family": "insertion",
+        "layout_mode": "seeded",
+        "layout_seed": 1299232108,
+        "world_id": "world-1",
+        "physics": {
+          "actuation_gain": 0.8727599306072416,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.01510560661434297
+      },
+      "success": true,
+      "simulator_success": true,
+      "termination": "agent_stop",
+      "error": null,
+      "steps": 386,
+      "skill_calls": 1,
+      "wall_seconds": 13.608999999938533,
+      "initial_state_sha256": "7fe735da35224677b0b5e6458b4e5b35d15e543f0929b23431a451c6e3923ea2",
+      "instruction": "Insert the round peg into the round hole and release it.",
+      "context_mode": "physical_context",
+      "context_bytes": 159,
+      "context_sha256": "d73282b93334465bcc57278a3f644183dbca91a53bb5a09676f54fd3d2b4bf14",
+      "calls": [
+        {
+          "index": 0,
+          "decision": {
+            "type": "skill",
+            "name": "insert",
+            "arguments": {
+              "motion_scale": 1.0,
+              "grasp_offset_m": 0.015
+            }
+          },
+          "start_step": 0,
+          "feedback": {
+            "status": "completed",
+            "object_lift_m": 0.1452951560177852,
+            "lateral_error_m": 0.0015626108162917758,
+            "motion_scale": 1.0
+          },
+          "end_step": 386
+        }
+      ],
+      "peak_wrist_force_N": 9.248224838094718,
+      "evaluation_metrics": {
+        "insertion_depth_m": 0.03109133742967496,
+        "lateral_error_m": 0.0009454726662016842,
+        "axis_up_z": 0.9999714514778882,
+        "tilt_deg": 0.4329427574166616,
+        "cross_section_margin_m": 0.004097580001560339,
+        "released": true
+      },
+      "video": "<project>/runs/release-v06-transfer/language_only/evaluation-w1-insert_round-0/rollout.mp4",
+      "video_sha256": "44a34d4b7127469e3b59aef821a99e5c23fbbe88ff87cf5a974bcb271ab77217",
+      "trajectory_sha256": "924b20858488a949eef8ccf52175fdee61240c299d3fa761eaf06b1b5203ed7e",
+      "initial_state_file_sha256": "1b76e9ec99e79069831d6c5fa2dc6ae7a461f48f0d361c48013df71f83f62fdc",
+      "task_metric_contract": {
+        "metric_version": "eah.metrics.v2",
+        "task_predicate": "released; upright axis_z > 0.995; tip depth 18..34 mm; tip lateral offset < opening minus peg radius/half-side; positive cross-section clearance at engaged wall planes",
+        "success_hold_control_steps": 5,
+        "success_hold_sample_span_s": 0.2,
+        "scope": "Fixed coarse simulation task specification, not manufacturing certification"
+      },
+      "final_success_hold_steps": 101,
+      "simulated_seconds": 19.3,
+      "metric_version": "eah.metrics.v2",
+      "force_limit_N": null,
+      "force_limit_basis": null,
+      "force_metric_status": "diagnostic_only",
+      "force_limit_pass": null,
+      "force_qualified_success": null,
+      "force_measurement": {
+        "source": "robosuite raw end-effector force sensor",
+        "frame": "eef_sensor",
+        "sample_rate_hz": 20,
+        "statistic": "maximum sampled Euclidean force norm over executed control steps",
+        "compensated": false,
+        "interpretation": "Raw simulated wrist load; includes dynamic/load effects. Not isolated contact force, continuous-time peak, or safety certification."
+      },
+      "init_asset_sha256": "31b0bc3f47c11aa9866534a72a3d28006cf8c795ddd78ddc48f9e5763f7e8ce0"
+    },
+    {
+      "schema": "eah.benchmark_episode.v1",
+      "evidence_kind": "simulator_execution",
+      "case": {
+        "id": "evaluation-w1-stack-0",
+        "backend": "manufacturing",
+        "task_id": "stack",
+        "split": "evaluation",
+        "task_family": "stacking",
+        "layout_mode": "seeded",
+        "layout_seed": 1717936150,
+        "world_id": "world-1",
+        "physics": {
+          "actuation_gain": 0.8727599306072416,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.013935081371351302
+      },
+      "success": true,
+      "simulator_success": true,
+      "termination": "agent_stop",
+      "error": null,
+      "steps": 412,
+      "skill_calls": 1,
+      "wall_seconds": 14.780999999959022,
+      "initial_state_sha256": "525e937c3e6649c1bb30d886e71a6ab4e95eaf4082f21b833673dad13883beb8",
+      "instruction": "Stack the small block on the large block and release it.",
+      "context_mode": "physical_context",
+      "context_bytes": 159,
+      "context_sha256": "d73282b93334465bcc57278a3f644183dbca91a53bb5a09676f54fd3d2b4bf14",
+      "calls": [
+        {
+          "index": 0,
+          "decision": {
+            "type": "skill",
+            "name": "stack",
+            "arguments": {
+              "motion_scale": 1.0,
+              "grasp_offset_m": 0.015
+            }
+          },
+          "start_step": 0,
+          "feedback": {
+            "status": "completed",
+            "object_lift_m": 0.19999729363998253,
+            "lateral_error_m": 0.01530392018507737,
+            "motion_scale": 1.0
+          },
+          "end_step": 412
+        }
+      ],
+      "peak_wrist_force_N": 9.34559689884864,
+      "evaluation_metrics": {
+        "lateral_error_m": 0.01370880126936922,
+        "object_height_m": 0.8693646732185696,
+        "released": true
+      },
+      "video": "<project>/runs/release-v06-transfer/language_only/evaluation-w1-stack-0/rollout.mp4",
+      "video_sha256": "76825eea8788548477fe884a580bbab448f1e7141a9f9baebf902c45193f5153",
+      "trajectory_sha256": "3e0560e010acccd5349633c0d6ada46e09b682bad3174ee0d42fc042f9c1b977",
+      "initial_state_file_sha256": "7ef34b1c827c4f07c2144ad86dd4aefc41c0201edc8e26d507d99f45e69b8d6f",
+      "task_metric_contract": {
+        "metric_version": "eah.metrics.v2",
+        "task_predicate": "robosuite 1.4 Stack contact/lift/release predicate",
+        "success_hold_control_steps": 5,
+        "success_hold_sample_span_s": 0.2,
+        "scope": "Fixed coarse simulation task specification, not manufacturing certification"
+      },
+      "final_success_hold_steps": 70,
+      "simulated_seconds": 20.6,
+      "metric_version": "eah.metrics.v2",
+      "force_limit_N": null,
+      "force_limit_basis": null,
+      "force_metric_status": "diagnostic_only",
+      "force_limit_pass": null,
+      "force_qualified_success": null,
+      "force_measurement": {
+        "source": "robosuite raw end-effector force sensor",
+        "frame": "eef_sensor",
+        "sample_rate_hz": 20,
+        "statistic": "maximum sampled Euclidean force norm over executed control steps",
+        "compensated": false,
+        "interpretation": "Raw simulated wrist load; includes dynamic/load effects. Not isolated contact force, continuous-time peak, or safety certification."
+      },
+      "init_asset_sha256": "91c21b93c47a5690afa839e5508c51048cdc44c35dc097614661cac6ad20d70a"
+    },
+    {
+      "schema": "eah.benchmark_episode.v1",
+      "evidence_kind": "simulator_execution",
+      "case": {
+        "id": "evaluation-w1-insert_square-0",
+        "backend": "manufacturing",
+        "task_id": "insert_square",
+        "split": "evaluation",
+        "task_family": "insertion",
+        "layout_mode": "seeded",
+        "layout_seed": 693398165,
+        "world_id": "world-1",
+        "physics": {
+          "actuation_gain": 0.8727599306072416,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.014241136259194423
+      },
+      "success": false,
+      "simulator_success": false,
+      "termination": "agent_stop",
+      "error": null,
+      "steps": 419,
+      "skill_calls": 1,
+      "wall_seconds": 14.906999999890104,
+      "initial_state_sha256": "bccf0dee2410d27958dad2d3edcd6a565bfc387d5c6d6775822a62b6f0dd572c",
+      "instruction": "Insert the square peg into the square hole and release it.",
+      "context_mode": "physical_context",
+      "context_bytes": 159,
+      "context_sha256": "d73282b93334465bcc57278a3f644183dbca91a53bb5a09676f54fd3d2b4bf14",
+      "calls": [
+        {
+          "index": 0,
+          "decision": {
+            "type": "skill",
+            "name": "insert",
+            "arguments": {
+              "motion_scale": 1.0,
+              "grasp_offset_m": 0.015
+            }
+          },
+          "start_step": 0,
+          "feedback": {
+            "status": "completed",
+            "object_lift_m": 0.1481749283587458,
+            "lateral_error_m": 0.010057414057705431,
+            "motion_scale": 1.0
+          },
+          "end_step": 419
+        }
+      ],
+      "peak_wrist_force_N": 9.579601621415781,
+      "evaluation_metrics": {
+        "insertion_depth_m": -0.010010784533047823,
+        "lateral_error_m": 0.008912072668388608,
+        "axis_up_z": -0.002854763217694453,
+        "tilt_deg": 90.16356610605197,
+        "cross_section_margin_m": null,
+        "released": true
+      },
+      "video": "<project>/runs/release-v06-transfer/language_only/evaluation-w1-insert_square-0/rollout.mp4",
+      "video_sha256": "2bc68616417e4d8c56c858dbdba3196d58ca54fce03b7bda3b84f92c77dd9221",
+      "trajectory_sha256": "f590642b96a7767cd3ebfe2b3c99ce89edff5d6a4c8a8b2f08965d00e9141ff4",
+      "initial_state_file_sha256": "2a80ddf07d4d60f42f44a73abf04f5a61b30e0e5abdee024e32878334b73495c",
+      "task_metric_contract": {
+        "metric_version": "eah.metrics.v2",
+        "task_predicate": "released; upright axis_z > 0.995; tip depth 18..34 mm; tip lateral offset < opening minus peg radius/half-side; positive cross-section clearance at engaged wall planes",
+        "success_hold_control_steps": 5,
+        "success_hold_sample_span_s": 0.2,
+        "scope": "Fixed coarse simulation task specification, not manufacturing certification"
+      },
+      "final_success_hold_steps": 0,
+      "simulated_seconds": 20.95,
+      "metric_version": "eah.metrics.v2",
+      "force_limit_N": null,
+      "force_limit_basis": null,
+      "force_metric_status": "diagnostic_only",
+      "force_limit_pass": null,
+      "force_qualified_success": null,
+      "force_measurement": {
+        "source": "robosuite raw end-effector force sensor",
+        "frame": "eef_sensor",
+        "sample_rate_hz": 20,
+        "statistic": "maximum sampled Euclidean force norm over executed control steps",
+        "compensated": false,
+        "interpretation": "Raw simulated wrist load; includes dynamic/load effects. Not isolated contact force, continuous-time peak, or safety certification."
+      },
+      "init_asset_sha256": "8ee3ddbf3c0cde29013699a73cee870b44c1f1e5424d767a44d7422ae2de6d51"
+    }
+  ]
+}

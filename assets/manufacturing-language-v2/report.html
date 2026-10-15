@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Agent benchmark: task execution</title>
+<style>body{font:16px system-ui;max-width:1000px;margin:30px auto;padding:0 18px;
+background:#fafafa;color:#20303c}p{line-height:1.6}video{width:100%;max-height:540px}
+select{font:inherit;padding:8px}pre{white-space:pre-wrap}</style>
+<h1>Agent benchmark: task execution</h1><p>Task success: 1/2.</p>
+<p>Task completion with state observations and participant-supplied policy code.
+Context comparisons use separate paired transfer reports.</p>
+<p>Raw wrist load is diagnostic unless a task limit and rationale are declared.</p>
+<label>Episode <select id="episode"></select></label><pre id="description"></pre>
+<video id="video" controls></video><p><a id="result">Episode JSON</a> ·
+<a href="summary.json">Summary</a> · <a href="manifest.json">Protocol</a></p>
+<script id="data" type="application/json">[{"id": "evaluation-w0-insert_round-0", "task": "insert_round", "instruction": "把圆销插入圆孔并松开", "success": false, "steps": 407, "termination": "agent_stop", "error": null, "peak_wrist_force_N": 7.194499594660297, "task_force_constraint_success": null, "metric_version": "eah.metrics.v2", "evaluation_metrics": {"insertion_depth_m": 0.023679321527737995, "lateral_error_m": 0.053237006338274266, "axis_up_z": -0.002568964589010958, "tilt_deg": 90.14719099056896, "cross_section_margin_m": null, "released": true}}, {"id": "evaluation-w1-insert_round-0", "task": "insert_round", "instruction": "把圆销插入圆孔并松开", "success": true, "steps": 482, "termination": "agent_stop", "error": null, "peak_wrist_force_N": 5.616668896025086, "task_force_constraint_success": null, "metric_version": "eah.metrics.v2", "evaluation_metrics": {"insertion_depth_m": 0.03115506311576044, "lateral_error_m": 0.0012495157595813218, "axis_up_z": 0.999999597274395, "tilt_deg": 0.05142120694935752, "cross_section_margin_m": 0.002975127382307938, "released": true}}]</script><script>
+const data=JSON.parse(document.getElementById('data').textContent);
+const select=document.getElementById('episode');
+data.forEach((r,i)=>{const o=document.createElement('option');
+o.value=i;o.textContent=r.id;select.append(o)});
+function show(){const r=data[Number(select.value)];
+document.getElementById('description').textContent=JSON.stringify(r,null,2);
+document.getElementById('video').src=`${r.id}/rollout.mp4`;
+document.getElementById('result').href=`${r.id}/result.json`;}
+select.addEventListener('change',show);show();</script></html>

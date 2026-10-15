@@ -1,0 +1,6 @@
+# Preserve bytes: evidence and frozen-code records contain file hashes.
+* -text whitespace=trailing-space,space-before-tab,cr-at-eol
+*.mp4 binary
+*.gif binary
+*.png binary
+*.npy binary

@@ -1,0 +1,87 @@
+{
+  "schema": "eah.benchmark_episode.v1",
+  "evidence_kind": "simulator_execution",
+  "case": {
+    "id": "evaluation-w0-stack-0",
+    "backend": "manufacturing",
+    "task_id": "stack",
+    "split": "evaluation",
+    "task_family": "stacking",
+    "layout_mode": "seeded",
+    "layout_seed": 880891515,
+    "world_id": "world-0",
+    "physics": {
+      "actuation_gain": 0.989810059146196,
+      "mass_scale": 1.0,
+      "friction": 0.8
+    },
+    "opening_m": 0.0144862354727657
+  },
+  "success": true,
+  "simulator_success": true,
+  "termination": "agent_stop",
+  "error": null,
+  "steps": 265,
+  "skill_calls": 1,
+  "wall_seconds": 9.641000000061467,
+  "initial_state_sha256": "365397fc132bede42a1121797c66e70a222df5d0b36177e46d42b853c3eb3ba6",
+  "instruction": "Stack the small block on the large block and release it.",
+  "context_mode": "physical_context",
+  "context_bytes": 8786,
+  "context_sha256": "37acd7737a3ab111dc93c33173cb770ec477b9a5370175839dbd6df99c43e7bc",
+  "calls": [
+    {
+      "index": 0,
+      "decision": {
+        "type": "skill",
+        "name": "stack",
+        "arguments": {
+          "motion_scale": 1.0,
+          "grasp_offset_m": 0.015
+        }
+      },
+      "start_step": 0,
+      "feedback": {
+        "status": "completed",
+        "object_lift_m": 0.2014097760358895,
+        "lateral_error_m": 0.0010755333753277277,
+        "motion_scale": 1.0
+      },
+      "end_step": 265
+    }
+  ],
+  "peak_wrist_force_N": 6.28757034951392,
+  "evaluation_metrics": {
+    "lateral_error_m": 0.0007737289098937143,
+    "object_height_m": 0.8695976781016852,
+    "released": true
+  },
+  "video": "<project>/runs/release-v06-transfer/shuffled_feedback/evaluation-w0-stack-0/rollout.mp4",
+  "video_sha256": "8b1f090455b41d3596030d56264a6a77d0a2e4188e9dbb544f8386f73be78e34",
+  "trajectory_sha256": "02cc2a0b28472b8c6d4706a5097d47c95d1f6e26fca375a2451e7a9cf6b73b61",
+  "initial_state_file_sha256": "fd55836cab48e96305d31f6d144d9ca3e63e3ee69657669a2614cd061db0e0aa",
+  "task_metric_contract": {
+    "metric_version": "eah.metrics.v2",
+    "task_predicate": "robosuite 1.4 Stack contact/lift/release predicate",
+    "success_hold_control_steps": 5,
+    "success_hold_sample_span_s": 0.2,
+    "scope": "Fixed coarse simulation task specification, not manufacturing certification"
+  },
+  "final_success_hold_steps": 94,
+  "simulated_seconds": 13.25,
+  "metric_version": "eah.metrics.v2",
+  "force_limit_N": null,
+  "force_limit_basis": null,
+  "force_metric_status": "diagnostic_only",
+  "force_limit_pass": null,
+  "force_qualified_success": null,
+  "force_measurement": {
+    "source": "robosuite raw end-effector force sensor",
+    "frame": "eef_sensor",
+    "sample_rate_hz": 20,
+    "statistic": "maximum sampled Euclidean force norm over executed control steps",
+    "compensated": false,
+    "interpretation": "Raw simulated wrist load; includes dynamic/load effects. Not isolated contact force, continuous-time peak, or safety certification."
+  },
+  "init_asset_sha256": "58dc91e26b6d1ba05bb8d0ca8b3e8f744a0f3ac543df47a52cb28467982218d8"
+}

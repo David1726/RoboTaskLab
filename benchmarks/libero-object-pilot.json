@@ -1,0 +1,13 @@
+{
+  "schema": "eah.benchmark.v1",
+  "name": "LIBERO object pilot v0.1",
+  "observation_mode": "state",
+  "max_steps": 550,
+  "max_skill_calls": 3,
+  "cases": [
+    {"id": "dev-soup-0", "split": "development", "task_id": 0, "init_state_index": 0},
+    {"id": "eval-soup-1", "split": "evaluation", "task_id": 0, "init_state_index": 1},
+    {"id": "eval-soup-2", "split": "evaluation", "task_id": 0, "init_state_index": 2},
+    {"id": "eval-soup-3", "split": "evaluation", "task_id": 0, "init_state_index": 3}
+  ]
+}

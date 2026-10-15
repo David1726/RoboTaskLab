@@ -1,0 +1,17 @@
+{
+  "schema": "eah.experiment.v1",
+  "backend": "libero",
+  "atomic": "libero_pick_place",
+  "models": {
+    "planner": "REPLACE_MODEL_ID",
+    "engineer": "REPLACE_MODEL_ID",
+    "reviewer": "REPLACE_MODEL_ID"
+  },
+  "reasoning_effort": "medium",
+  "tool_budget": 20,
+  "infra_retries": 0,
+  "panels": {
+    "development": {"tasks": ["libero_object/0"], "seeds": [21, 22]},
+    "heldout": {"tasks": ["libero_object/1"], "seeds": [31, 32]}
+  }
+}

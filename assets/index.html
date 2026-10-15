@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Embodied Agent Harness: reference runs</title>
+<style>body{font:16px system-ui;max-width:1040px;margin:36px auto;padding:0 20px;
+background:#fafafa;color:#20303c}p{line-height:1.6}table{width:100%;border-collapse:collapse}
+td,th{text-align:left;padding:14px;border-bottom:1px solid #ddd}a{color:#155c98}
+img{max-width:100%;display:block;margin:24px auto}</style>
+<h1>Embodied Agent Harness: reference runs</h1>
+<p>Recorded Panda tasks with state observations and a frozen rule controller.
+Agent task completion and source-context transfer are evaluated separately.
+These recordings use version 0.6.0 with corrected contact friction.</p>
+<table><thead><tr><th>Experiment</th><th>Task success</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>Agent: five tasks, two physical worlds</td><td>8/10</td>
+<td><a href="manufacturing-agent-v2/report.html">Episodes and videos</a></td></tr>
+<tr><td>Cross-family transfer: six conditions</td>
+<td>No context 3/6; matching source and action effect 4/6; other conditions 3/6</td>
+<td><a href="manufacturing-picl-v2/report.html">Paired report</a> ·
+<a href="manufacturing-picl-v2/source/report.html">Source episodes</a></td></tr>
+<tr><td>Manufacturing-only installation: Chinese goals</td><td>1/2; PyTorch absent</td>
+<td><a href="manufacturing-language-v2/report.html">Episodes and videos</a></td></tr>
+</tbody></table>
+<p>Metric version: eah.metrics.v2. Completion checks release, task geometry and
+five consecutive successful samples. Raw wrist load is diagnostic; no default force limit.</p>
+<p>Two physical worlds are insufficient for a confidence interval. The observed
+transfer uses free-space servo calibration, not a learned contact model.</p>
+<p>Both source tasks failed to complete. Their motion probes remain valid
+interaction data; the source report retains the full failures.</p>
+<img src="insertion.gif" alt="Panda square-peg insertion">
+<p>The GIF is an accelerated preview of a successful target rollout. Open the
+reports for full-timing videos, failures, trajectories and file hashes.</p>
+</html>

@@ -1,0 +1,15 @@
+include README.md LICENSE THIRD_PARTY.md CONTRIBUTING.md CHANGELOG.md pyproject.toml .gitignore .gitattributes
+recursive-include docs *.md
+recursive-include scripts *.py
+recursive-include examples *.py *.json
+recursive-include participant *.py
+recursive-include benchmarks *.json
+recursive-include tests *.py
+recursive-include assets *.json *.jsonl *.mp4 *.gif *.png *.npy *.html
+recursive-include .github *.yml
+global-exclude *.pyc
+prune .research
+prune .venv
+prune .cache
+prune runs
+prune build

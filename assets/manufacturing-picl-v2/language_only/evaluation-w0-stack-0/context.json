@@ -1,0 +1,10 @@
+{
+  "mode": "physical_context",
+  "shots": 1,
+  "experiences": [
+    {
+      "instruction": "Place the round nut onto its shaft and release it.",
+      "task_family": "nut_assembly"
+    }
+  ]
+}

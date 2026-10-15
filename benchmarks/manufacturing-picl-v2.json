@@ -1,0 +1,144 @@
+{
+  "schema": "eah.benchmark.v2",
+  "name": "Manufacturing physical_icl seeded suite",
+  "evaluation_track": "physical_icl",
+  "observation_mode": "state",
+  "max_steps": 1000,
+  "max_skill_calls": 4,
+  "generator_seed": 20261109,
+  "source_family": "nut_assembly",
+  "physical_worlds": 2,
+  "physical_axis": "actuation",
+  "source_counterfactual": "same source task and layout; physics differs across worlds",
+  "cases": [
+    {
+      "id": "evaluation-w0-insert_square-0",
+      "backend": "manufacturing",
+      "task_id": "insert_square",
+      "split": "evaluation",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 2000363566,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 0.989810059146196,
+        "mass_scale": 1.0,
+        "friction": 0.8
+      },
+      "opening_m": 0.015253759311070583
+    },
+    {
+      "id": "evaluation-w0-stack-0",
+      "backend": "manufacturing",
+      "task_id": "stack",
+      "split": "evaluation",
+      "task_family": "stacking",
+      "layout_mode": "seeded",
+      "layout_seed": 880891515,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 0.989810059146196,
+        "mass_scale": 1.0,
+        "friction": 0.8
+      },
+      "opening_m": 0.0144862354727657
+    },
+    {
+      "id": "development-w1-nut_round-0",
+      "backend": "manufacturing",
+      "task_id": "nut_round",
+      "split": "development",
+      "task_family": "nut_assembly",
+      "layout_mode": "seeded",
+      "layout_seed": 204469040,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 0.8727599306072416,
+        "mass_scale": 1.0,
+        "friction": 0.8
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "evaluation-w0-insert_round-0",
+      "backend": "manufacturing",
+      "task_id": "insert_round",
+      "split": "evaluation",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 783209919,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 0.989810059146196,
+        "mass_scale": 1.0,
+        "friction": 0.8
+      },
+      "opening_m": 0.013516325442051171
+    },
+    {
+      "id": "development-w0-nut_round-0",
+      "backend": "manufacturing",
+      "task_id": "nut_round",
+      "split": "development",
+      "task_family": "nut_assembly",
+      "layout_mode": "seeded",
+      "layout_seed": 204469040,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 0.989810059146196,
+        "mass_scale": 1.0,
+        "friction": 0.8
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "evaluation-w1-insert_round-0",
+      "backend": "manufacturing",
+      "task_id": "insert_round",
+      "split": "evaluation",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1299232108,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 0.8727599306072416,
+        "mass_scale": 1.0,
+        "friction": 0.8
+      },
+      "opening_m": 0.01510560661434297
+    },
+    {
+      "id": "evaluation-w1-stack-0",
+      "backend": "manufacturing",
+      "task_id": "stack",
+      "split": "evaluation",
+      "task_family": "stacking",
+      "layout_mode": "seeded",
+      "layout_seed": 1717936150,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 0.8727599306072416,
+        "mass_scale": 1.0,
+        "friction": 0.8
+      },
+      "opening_m": 0.013935081371351302
+    },
+    {
+      "id": "evaluation-w1-insert_square-0",
+      "backend": "manufacturing",
+      "task_id": "insert_square",
+      "split": "evaluation",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 693398165,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 0.8727599306072416,
+        "mass_scale": 1.0,
+        "friction": 0.8
+      },
+      "opening_m": 0.014241136259194423
+    }
+  ],
+  "scope": "Single Panda contact simulation; actuator calibration + mass + friction. Not a neural ICL result or a real factory benchmark."
+}

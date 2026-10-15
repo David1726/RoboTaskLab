@@ -1,0 +1,336 @@
+{
+  "schema": "eah.benchmark.v2",
+  "name": "Manufacturing agent seeded suite",
+  "evaluation_track": "agent",
+  "observation_mode": "state",
+  "max_steps": 1000,
+  "max_skill_calls": 4,
+  "generator_seed": 20261108,
+  "source_family": "nut_assembly",
+  "physical_worlds": 2,
+  "physical_axis": "combined",
+  "source_counterfactual": "same source task and layout; physics differs across worlds",
+  "cases": [
+    {
+      "id": "evaluation-w1-insert_square-0",
+      "backend": "manufacturing",
+      "task_id": "insert_square",
+      "split": "evaluation",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1826456803,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 1.2890594636439914,
+        "mass_scale": 1.4114779492465364,
+        "friction": 0.5107450770587932
+      },
+      "opening_m": 0.015310413599015412
+    },
+    {
+      "id": "evaluation-w0-stack-0",
+      "backend": "manufacturing",
+      "task_id": "stack",
+      "split": "evaluation",
+      "task_family": "stacking",
+      "layout_mode": "seeded",
+      "layout_seed": 1276494064,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 1.4951613264016064,
+        "mass_scale": 1.4109175630172528,
+        "friction": 0.6085640105865228
+      },
+      "opening_m": 0.014836623004132412
+    },
+    {
+      "id": "development-w0-nut_round-0",
+      "backend": "manufacturing",
+      "task_id": "nut_round",
+      "split": "development",
+      "task_family": "nut_assembly",
+      "layout_mode": "seeded",
+      "layout_seed": 1935188101,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 1.4951613264016064,
+        "mass_scale": 1.4109175630172528,
+        "friction": 0.6085640105865228
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "development-w1-insert_round-0",
+      "backend": "manufacturing",
+      "task_id": "insert_round",
+      "split": "development",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1935188101,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 1.2890594636439914,
+        "mass_scale": 1.4114779492465364,
+        "friction": 0.5107450770587932
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "evaluation-w1-nut_square-0",
+      "backend": "manufacturing",
+      "task_id": "nut_square",
+      "split": "evaluation",
+      "task_family": "nut_assembly",
+      "layout_mode": "seeded",
+      "layout_seed": 1442649858,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 1.2890594636439914,
+        "mass_scale": 1.4114779492465364,
+        "friction": 0.5107450770587932
+      },
+      "opening_m": 0.013904090381149979
+    },
+    {
+      "id": "development-w0-stack-0",
+      "backend": "manufacturing",
+      "task_id": "stack",
+      "split": "development",
+      "task_family": "stacking",
+      "layout_mode": "seeded",
+      "layout_seed": 1935188101,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 1.4951613264016064,
+        "mass_scale": 1.4109175630172528,
+        "friction": 0.6085640105865228
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "evaluation-w1-stack-0",
+      "backend": "manufacturing",
+      "task_id": "stack",
+      "split": "evaluation",
+      "task_family": "stacking",
+      "layout_mode": "seeded",
+      "layout_seed": 1683902477,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 1.2890594636439914,
+        "mass_scale": 1.4114779492465364,
+        "friction": 0.5107450770587932
+      },
+      "opening_m": 0.014478200162246036
+    },
+    {
+      "id": "evaluation-w0-insert_square-0",
+      "backend": "manufacturing",
+      "task_id": "insert_square",
+      "split": "evaluation",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1826299574,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 1.4951613264016064,
+        "mass_scale": 1.4109175630172528,
+        "friction": 0.6085640105865228
+      },
+      "opening_m": 0.013662313712451494
+    },
+    {
+      "id": "evaluation-w0-nut_square-0",
+      "backend": "manufacturing",
+      "task_id": "nut_square",
+      "split": "evaluation",
+      "task_family": "nut_assembly",
+      "layout_mode": "seeded",
+      "layout_seed": 468796370,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 1.4951613264016064,
+        "mass_scale": 1.4109175630172528,
+        "friction": 0.6085640105865228
+      },
+      "opening_m": 0.01350118293424688
+    },
+    {
+      "id": "development-w0-insert_square-0",
+      "backend": "manufacturing",
+      "task_id": "insert_square",
+      "split": "development",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1935188101,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 1.4951613264016064,
+        "mass_scale": 1.4109175630172528,
+        "friction": 0.6085640105865228
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "evaluation-w1-nut_round-0",
+      "backend": "manufacturing",
+      "task_id": "nut_round",
+      "split": "evaluation",
+      "task_family": "nut_assembly",
+      "layout_mode": "seeded",
+      "layout_seed": 1826412155,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 1.2890594636439914,
+        "mass_scale": 1.4114779492465364,
+        "friction": 0.5107450770587932
+      },
+      "opening_m": 0.0153213900709992
+    },
+    {
+      "id": "development-w1-insert_square-0",
+      "backend": "manufacturing",
+      "task_id": "insert_square",
+      "split": "development",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1935188101,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 1.2890594636439914,
+        "mass_scale": 1.4114779492465364,
+        "friction": 0.5107450770587932
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "development-w1-stack-0",
+      "backend": "manufacturing",
+      "task_id": "stack",
+      "split": "development",
+      "task_family": "stacking",
+      "layout_mode": "seeded",
+      "layout_seed": 1935188101,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 1.2890594636439914,
+        "mass_scale": 1.4114779492465364,
+        "friction": 0.5107450770587932
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "evaluation-w0-nut_round-0",
+      "backend": "manufacturing",
+      "task_id": "nut_round",
+      "split": "evaluation",
+      "task_family": "nut_assembly",
+      "layout_mode": "seeded",
+      "layout_seed": 1824074319,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 1.4951613264016064,
+        "mass_scale": 1.4109175630172528,
+        "friction": 0.6085640105865228
+      },
+      "opening_m": 0.014899522408085546
+    },
+    {
+      "id": "development-w1-nut_square-0",
+      "backend": "manufacturing",
+      "task_id": "nut_square",
+      "split": "development",
+      "task_family": "nut_assembly",
+      "layout_mode": "seeded",
+      "layout_seed": 1935188101,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 1.2890594636439914,
+        "mass_scale": 1.4114779492465364,
+        "friction": 0.5107450770587932
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "development-w0-nut_square-0",
+      "backend": "manufacturing",
+      "task_id": "nut_square",
+      "split": "development",
+      "task_family": "nut_assembly",
+      "layout_mode": "seeded",
+      "layout_seed": 1935188101,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 1.4951613264016064,
+        "mass_scale": 1.4109175630172528,
+        "friction": 0.6085640105865228
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "evaluation-w1-insert_round-0",
+      "backend": "manufacturing",
+      "task_id": "insert_round",
+      "split": "evaluation",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1608960320,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 1.2890594636439914,
+        "mass_scale": 1.4114779492465364,
+        "friction": 0.5107450770587932
+      },
+      "opening_m": 0.015132646049426712
+    },
+    {
+      "id": "development-w1-nut_round-0",
+      "backend": "manufacturing",
+      "task_id": "nut_round",
+      "split": "development",
+      "task_family": "nut_assembly",
+      "layout_mode": "seeded",
+      "layout_seed": 1935188101,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 1.2890594636439914,
+        "mass_scale": 1.4114779492465364,
+        "friction": 0.5107450770587932
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "development-w0-insert_round-0",
+      "backend": "manufacturing",
+      "task_id": "insert_round",
+      "split": "development",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1935188101,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 1.4951613264016064,
+        "mass_scale": 1.4109175630172528,
+        "friction": 0.6085640105865228
+      },
+      "opening_m": 0.014
+    },
+    {
+      "id": "evaluation-w0-insert_round-0",
+      "backend": "manufacturing",
+      "task_id": "insert_round",
+      "split": "evaluation",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 63317726,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 1.4951613264016064,
+        "mass_scale": 1.4109175630172528,
+        "friction": 0.6085640105865228
+      },
+      "opening_m": 0.014597487982545928
+    }
+  ],
+  "scope": "Single Panda contact simulation; actuator calibration + mass + friction. Not a neural ICL result or a real factory benchmark."
+}

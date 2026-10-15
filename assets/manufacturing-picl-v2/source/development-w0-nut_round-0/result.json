@@ -1,0 +1,112 @@
+{
+  "schema": "eah.benchmark_episode.v1",
+  "evidence_kind": "simulator_execution",
+  "case": {
+    "id": "development-w0-nut_round-0",
+    "backend": "manufacturing",
+    "task_id": "nut_round",
+    "split": "development",
+    "task_family": "nut_assembly",
+    "layout_mode": "seeded",
+    "layout_seed": 204469040,
+    "world_id": "world-0",
+    "physics": {
+      "actuation_gain": 0.989810059146196,
+      "mass_scale": 1.0,
+      "friction": 0.8
+    },
+    "opening_m": 0.014
+  },
+  "success": false,
+  "simulator_success": false,
+  "termination": "agent_stop",
+  "error": null,
+  "steps": 631,
+  "skill_calls": 2,
+  "wall_seconds": 22.983999999938533,
+  "initial_state_sha256": "40bea09b1d4eb941028058681280bde3ba76bfeec073319fd406576d466e7e68",
+  "instruction": "Place the round nut onto its shaft and release it.",
+  "context_mode": "no_context",
+  "context_bytes": 41,
+  "context_sha256": "b52e6c5083b3f5e41adfbd44c2351102d526a1a6f549d648b4c50239a42a71e3",
+  "calls": [
+    {
+      "index": 0,
+      "decision": {
+        "type": "skill",
+        "name": "probe_cartesian",
+        "arguments": {}
+      },
+      "start_step": 0,
+      "feedback": {
+        "status": "measured",
+        "response_gain": 0.22863504830586492,
+        "before_eef_m": [
+          -0.10222195965532245,
+          -1.8478738075964693e-10,
+          1.0765914119060167
+        ],
+        "after_eef_m": [
+          -0.07478575385861866,
+          -4.5966958065947994e-10,
+          1.074723883711273
+        ],
+        "command_x_sum": 2.4
+      },
+      "end_step": 49
+    },
+    {
+      "index": 1,
+      "decision": {
+        "type": "skill",
+        "name": "assemble_nut",
+        "arguments": {
+          "motion_scale": 1.0,
+          "grasp_offset_m": 0.0
+        }
+      },
+      "start_step": 49,
+      "feedback": {
+        "status": "completed",
+        "object_lift_m": 0.26658274019201544,
+        "lateral_error_m": 0.0011950850168445221,
+        "motion_scale": 1.0
+      },
+      "end_step": 631
+    }
+  ],
+  "peak_wrist_force_N": 797.6788011778839,
+  "evaluation_metrics": {
+    "lateral_error_m": 0.0007195190931409809,
+    "object_height_m": 0.9000594717959832,
+    "released": true
+  },
+  "video": "<project>/runs/release-v06-source/development-w0-nut_round-0/rollout.mp4",
+  "video_sha256": "2121929c7742f437be41319df03b29a7c4d5fb7fc7f80032975ee1312b410e1e",
+  "trajectory_sha256": "781666b2e2444c48cb0a6232a9ce9b96077f47cced4e179d9ac9e5f2b13174d5",
+  "initial_state_file_sha256": "6cd016563829756c16b875518812351784b68de8ead0e0733c88bab13771917c",
+  "task_metric_contract": {
+    "metric_version": "eah.metrics.v2",
+    "task_predicate": "robosuite 1.4 NutAssembly placement predicate plus not grasped",
+    "success_hold_control_steps": 5,
+    "success_hold_sample_span_s": 0.2,
+    "scope": "Fixed coarse simulation task specification, not manufacturing certification"
+  },
+  "final_success_hold_steps": 0,
+  "simulated_seconds": 31.55,
+  "metric_version": "eah.metrics.v2",
+  "force_limit_N": null,
+  "force_limit_basis": null,
+  "force_metric_status": "diagnostic_only",
+  "force_limit_pass": null,
+  "force_qualified_success": null,
+  "force_measurement": {
+    "source": "robosuite raw end-effector force sensor",
+    "frame": "eef_sensor",
+    "sample_rate_hz": 20,
+    "statistic": "maximum sampled Euclidean force norm over executed control steps",
+    "compensated": false,
+    "interpretation": "Raw simulated wrist load; includes dynamic/load effects. Not isolated contact force, continuous-time peak, or safety certification."
+  },
+  "init_asset_sha256": "fe0c54029b561f7dbc485da2b09c80cd90b01bac3cc8b4f1e5896f906d4866be"
+}

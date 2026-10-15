@@ -1,0 +1,7 @@
+{
+  "preview": "insertion.gif",
+  "sha256": "bc1cff265d5190ab7906e0cb2c5e401d366c9c76b64ac154b43433fb2d35f4e9",
+  "source": "manufacturing-agent-v2/evaluation-w1-insert_square-0/rollout.mp4",
+  "source_sha256": "e2bbf8b94a72c797f45e3a5facfc03307d60dd0b0eb57ba2810cb5e880969c94",
+  "transform": "384px GIF preview; 8 fps input sampling; timestamps scaled by 0.6. Original video unchanged."
+}

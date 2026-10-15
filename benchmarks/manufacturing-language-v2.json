@@ -1,0 +1,84 @@
+{
+  "schema": "eah.benchmark.v2",
+  "name": "Manufacturing agent seeded suite",
+  "evaluation_track": "agent",
+  "observation_mode": "state",
+  "max_steps": 1000,
+  "max_skill_calls": 4,
+  "generator_seed": 20261111,
+  "source_family": "nut_assembly",
+  "physical_worlds": 2,
+  "physical_axis": "combined",
+  "source_counterfactual": "same source task and layout; physics differs across worlds",
+  "cases": [
+    {
+      "id": "evaluation-w0-insert_round-0",
+      "backend": "manufacturing",
+      "task_id": "insert_round",
+      "split": "evaluation",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 474753180,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 0.8454052966575911,
+        "mass_scale": 1.0395329648020288,
+        "friction": 0.9409513154688087
+      },
+      "opening_m": 0.013863080602188485,
+      "instruction": "把圆销插入圆孔并松开"
+    },
+    {
+      "id": "development-w0-insert_round-0",
+      "backend": "manufacturing",
+      "task_id": "insert_round",
+      "split": "development",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1150508477,
+      "world_id": "world-0",
+      "physics": {
+        "actuation_gain": 0.8454052966575911,
+        "mass_scale": 1.0395329648020288,
+        "friction": 0.9409513154688087
+      },
+      "opening_m": 0.014,
+      "instruction": "把圆销插入圆孔并松开"
+    },
+    {
+      "id": "evaluation-w1-insert_round-0",
+      "backend": "manufacturing",
+      "task_id": "insert_round",
+      "split": "evaluation",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1235008246,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 0.573828190884435,
+        "mass_scale": 1.0531738412082172,
+        "friction": 0.5004847058147053
+      },
+      "opening_m": 0.0142246388363393,
+      "instruction": "把圆销插入圆孔并松开"
+    },
+    {
+      "id": "development-w1-insert_round-0",
+      "backend": "manufacturing",
+      "task_id": "insert_round",
+      "split": "development",
+      "task_family": "insertion",
+      "layout_mode": "seeded",
+      "layout_seed": 1150508477,
+      "world_id": "world-1",
+      "physics": {
+        "actuation_gain": 0.573828190884435,
+        "mass_scale": 1.0531738412082172,
+        "friction": 0.5004847058147053
+      },
+      "opening_m": 0.014,
+      "instruction": "把圆销插入圆孔并松开"
+    }
+  ],
+  "scope": "Single Panda contact simulation; actuator calibration + mass + friction. Not a neural ICL result or a real factory benchmark."
+}

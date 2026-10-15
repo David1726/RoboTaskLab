@@ -1,0 +1,9 @@
+{
+  "schema": "eah.benchmark.v1", "name": "Disjoint cross-object target task pilot", "observation_mode": "state",
+  "max_steps": 600, "max_skill_calls": 3,
+  "cases": [
+    {"id": "target-cheese-0", "split": "evaluation", "task_id": 1, "layout_mode": "expanded_reset", "layout_seed": 501, "jitter_m": 0.05},
+    {"id": "target-tomato-0", "split": "evaluation", "task_id": 5, "layout_mode": "expanded_reset", "layout_seed": 502, "jitter_m": 0.05},
+    {"id": "target-pudding-0", "split": "evaluation", "task_id": 8, "layout_mode": "expanded_reset", "layout_seed": 503, "jitter_m": 0.05}
+  ]
+}

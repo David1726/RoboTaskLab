@@ -1,0 +1,86 @@
+{
+  "schema": "eah.evidence_export.v1",
+  "files": [
+    {
+      "file": "manifest.json",
+      "original_sha256": "eae60f30577e682944cff39ade0fe9d4bbc347f8acbc134e570b3ae75a21160f",
+      "export_sha256": "3b823d6457165a8e89479a3bf6ad230c1975c22eab3f0d639a1aa1e2868f4939"
+    },
+    {
+      "file": "summary.json",
+      "original_sha256": "e08d9435f6528855707fac4d8b21b362007f2a6bc9632e9937de81a277e7f4b6",
+      "export_sha256": "3f91dbfe6ae1300667628b07ccb579015cf0c30321b1f7e86425f58980a087b1"
+    },
+    {
+      "file": "evaluation-w0-insert_round-0/result.json",
+      "original_sha256": "6f83a94e11b9188e28422d58d1f409986ab6fc60c248a9a1edef6f6672afbb41",
+      "export_sha256": "d3e1d95160c6356eea65d770b8b80f9dd5c3ba7899eafedcd52bcf233affab2f"
+    },
+    {
+      "file": "evaluation-w0-insert_round-0/trajectory.jsonl",
+      "original_sha256": "4dfbaf6b3346fc32ac0fc63952d3f3d49295771cac29d90e8411c3fcd445900f",
+      "export_sha256": "4dfbaf6b3346fc32ac0fc63952d3f3d49295771cac29d90e8411c3fcd445900f"
+    },
+    {
+      "file": "evaluation-w0-insert_round-0/rollout.mp4",
+      "original_sha256": "66a3464694b21a6e42b9fe19d631c98a24e188b09587a08c10d1e63e9f45052e",
+      "export_sha256": "66a3464694b21a6e42b9fe19d631c98a24e188b09587a08c10d1e63e9f45052e"
+    },
+    {
+      "file": "evaluation-w0-insert_round-0/initial-state.npy",
+      "original_sha256": "add944307d9da3833c13b275f0972289e3a32b3090f59696b375db1ebfbe2dc4",
+      "export_sha256": "add944307d9da3833c13b275f0972289e3a32b3090f59696b375db1ebfbe2dc4"
+    },
+    {
+      "file": "evaluation-w0-insert_round-0/latest.png",
+      "original_sha256": "cc6b762e26ad8ff649d2e2c11cdf956c9d708451077bf6b2a0269fc38a9ca75b",
+      "export_sha256": "cc6b762e26ad8ff649d2e2c11cdf956c9d708451077bf6b2a0269fc38a9ca75b"
+    },
+    {
+      "file": "evaluation-w1-insert_round-0/result.json",
+      "original_sha256": "695c93895e7c39481057f986cdbcf9a8a60c3619e8d21a39c29767e42fecab78",
+      "export_sha256": "7f260a0969d6fff3ebb371cf30ac94ea53c37a36aeda6a67d5cad8a7aa1d1cc0"
+    },
+    {
+      "file": "evaluation-w1-insert_round-0/trajectory.jsonl",
+      "original_sha256": "ef60438b6326017209ee2034645e683d15f630d642703e528ca615b120f32152",
+      "export_sha256": "ef60438b6326017209ee2034645e683d15f630d642703e528ca615b120f32152"
+    },
+    {
+      "file": "evaluation-w1-insert_round-0/rollout.mp4",
+      "original_sha256": "4a383c12003e35d9164f18f5e28ee7dde76f6993e088908fd736f9c7385bafc3",
+      "export_sha256": "4a383c12003e35d9164f18f5e28ee7dde76f6993e088908fd736f9c7385bafc3"
+    },
+    {
+      "file": "evaluation-w1-insert_round-0/initial-state.npy",
+      "original_sha256": "65f5cc0eb358b792a0e129c6e39374c35c7f2d5f16ddde907bdeaf9461545bcb",
+      "export_sha256": "65f5cc0eb358b792a0e129c6e39374c35c7f2d5f16ddde907bdeaf9461545bcb"
+    },
+    {
+      "file": "evaluation-w1-insert_round-0/latest.png",
+      "original_sha256": "445104f992dd2412910d0c16dd0d87013df8050c7190d3a81478ce05b5580741",
+      "export_sha256": "445104f992dd2412910d0c16dd0d87013df8050c7190d3a81478ce05b5580741"
+    },
+    {
+      "file": "evaluation-w0-insert_round-0/context.json",
+      "original_sha256": "4376732d2b4bc06a18d72cf992eaa083d04a5830d4f02ef7c369f98c38b03a1e",
+      "export_sha256": "4376732d2b4bc06a18d72cf992eaa083d04a5830d4f02ef7c369f98c38b03a1e"
+    },
+    {
+      "file": "evaluation-w0-insert_round-0/physical-state.json",
+      "original_sha256": "346353201203c15eb8a4c0a702983437061c7e5ed7c039f977ead63a4a2dfde0",
+      "export_sha256": "346353201203c15eb8a4c0a702983437061c7e5ed7c039f977ead63a4a2dfde0"
+    },
+    {
+      "file": "evaluation-w1-insert_round-0/context.json",
+      "original_sha256": "4376732d2b4bc06a18d72cf992eaa083d04a5830d4f02ef7c369f98c38b03a1e",
+      "export_sha256": "4376732d2b4bc06a18d72cf992eaa083d04a5830d4f02ef7c369f98c38b03a1e"
+    },
+    {
+      "file": "evaluation-w1-insert_round-0/physical-state.json",
+      "original_sha256": "c97f0cb24f4aa1c5c59ab33afba9639de4450d54a97b53715916a36174890305",
+      "export_sha256": "c97f0cb24f4aa1c5c59ab33afba9639de4450d54a97b53715916a36174890305"
+    }
+  ],
+  "note": "JSON host paths redacted; undefined diagnostics exported as null. Media/state/trajectory bytes unchanged; raw runs preserved."
+}

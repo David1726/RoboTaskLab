@@ -1,0 +1,202 @@
+{
+  "panel": {
+    "schema": "eah.benchmark.v2",
+    "name": "Manufacturing physical_icl seeded suite",
+    "evaluation_track": "physical_icl",
+    "observation_mode": "state",
+    "max_steps": 1000,
+    "max_skill_calls": 4,
+    "generator_seed": 20261109,
+    "source_family": "nut_assembly",
+    "physical_worlds": 2,
+    "physical_axis": "actuation",
+    "source_counterfactual": "same source task and layout; physics differs across worlds",
+    "cases": [
+      {
+        "id": "evaluation-w0-insert_square-0",
+        "backend": "manufacturing",
+        "task_id": "insert_square",
+        "split": "evaluation",
+        "task_family": "insertion",
+        "layout_mode": "seeded",
+        "layout_seed": 2000363566,
+        "world_id": "world-0",
+        "physics": {
+          "actuation_gain": 0.989810059146196,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.015253759311070583
+      },
+      {
+        "id": "evaluation-w0-stack-0",
+        "backend": "manufacturing",
+        "task_id": "stack",
+        "split": "evaluation",
+        "task_family": "stacking",
+        "layout_mode": "seeded",
+        "layout_seed": 880891515,
+        "world_id": "world-0",
+        "physics": {
+          "actuation_gain": 0.989810059146196,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.0144862354727657
+      },
+      {
+        "id": "development-w1-nut_round-0",
+        "backend": "manufacturing",
+        "task_id": "nut_round",
+        "split": "development",
+        "task_family": "nut_assembly",
+        "layout_mode": "seeded",
+        "layout_seed": 204469040,
+        "world_id": "world-1",
+        "physics": {
+          "actuation_gain": 0.8727599306072416,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.014
+      },
+      {
+        "id": "evaluation-w0-insert_round-0",
+        "backend": "manufacturing",
+        "task_id": "insert_round",
+        "split": "evaluation",
+        "task_family": "insertion",
+        "layout_mode": "seeded",
+        "layout_seed": 783209919,
+        "world_id": "world-0",
+        "physics": {
+          "actuation_gain": 0.989810059146196,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.013516325442051171
+      },
+      {
+        "id": "development-w0-nut_round-0",
+        "backend": "manufacturing",
+        "task_id": "nut_round",
+        "split": "development",
+        "task_family": "nut_assembly",
+        "layout_mode": "seeded",
+        "layout_seed": 204469040,
+        "world_id": "world-0",
+        "physics": {
+          "actuation_gain": 0.989810059146196,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.014
+      },
+      {
+        "id": "evaluation-w1-insert_round-0",
+        "backend": "manufacturing",
+        "task_id": "insert_round",
+        "split": "evaluation",
+        "task_family": "insertion",
+        "layout_mode": "seeded",
+        "layout_seed": 1299232108,
+        "world_id": "world-1",
+        "physics": {
+          "actuation_gain": 0.8727599306072416,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.01510560661434297
+      },
+      {
+        "id": "evaluation-w1-stack-0",
+        "backend": "manufacturing",
+        "task_id": "stack",
+        "split": "evaluation",
+        "task_family": "stacking",
+        "layout_mode": "seeded",
+        "layout_seed": 1717936150,
+        "world_id": "world-1",
+        "physics": {
+          "actuation_gain": 0.8727599306072416,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.013935081371351302
+      },
+      {
+        "id": "evaluation-w1-insert_square-0",
+        "backend": "manufacturing",
+        "task_id": "insert_square",
+        "split": "evaluation",
+        "task_family": "insertion",
+        "layout_mode": "seeded",
+        "layout_seed": 693398165,
+        "world_id": "world-1",
+        "physics": {
+          "actuation_gain": 0.8727599306072416,
+          "mass_scale": 1.0,
+          "friction": 0.8
+        },
+        "opening_m": 0.014241136259194423
+      }
+    ],
+    "scope": "Single Panda contact simulation; actuator calibration + mass + friction. Not a neural ICL result or a real factory benchmark."
+  },
+  "metric_version": "eah.metrics.v2",
+  "execution_identity": {
+    "core_sha256": {
+      "__init__.py": "b4792d3d86a90b1fb3b7b484aebe4b8fcc108ba43b7537c859328db6f488bdfd",
+      "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "agents.py": "e7cca5be26c8e616af4c759cd805f118d8835e8838d3477b55f8f4a68333f8fd",
+      "benchmark.py": "7fe20b0c2f468fd6a7b20a476a283411ec0de8c1ebdb0032414f88f1bfd3c74d",
+      "bridges.py": "2edcfe94caecb6888a57a260788f7745574e6cbd149f067dd749389f22d8166e",
+      "cli.py": "6c36bfd06c60d158111ed0071f14a0c41ea8dfc689d6b3226786ed74f03e9156",
+      "evidence.py": "58c5ae1d998f78f1ba2453e4ac795c69556923378a29810e384eb282354058d0",
+      "language.py": "4c6fa6ae94e6859cf5fbbf0de9f67ae5c58a3c011a6e331c34a0f3063d0b49ea",
+      "libero_demo.py": "75daecfcf9c85a808a26ef1c6df0890f8813f45247577b612e44d314ffc1f66a",
+      "manufacturing.py": "dc769e82acd5e799a23110d9db92c21c35b7bf7dbfb6672d68e0bfcb72564f86",
+      "memory.py": "e46718c0ec04a1f5041cab99a1d64a33ff5c83ccbec86a27e682e52278b6fed3",
+      "metrics.py": "5f181971b8c47bfb42ddff5b4255dfc0a4b208d7c5a0cce477ef818eb9569063",
+      "physical_icl.py": "43d7e598e85a967bee991979a30a93e70566255726d4a93f27a93b5e164eb980",
+      "portable.py": "9554c1b014f717b32d0c30a0dc74a027e679105e2fcff7a48f7f9103dbb4d75f",
+      "report.py": "8c3e60d881260d9404f8ec3462f78ba21ad0bbd83fea666bcbbe6f4a2bc29438",
+      "roborsi.py": "1cd8ba6583045f05d50035d812f410bc49ea6a179c555c73bd6392bc9249089d",
+      "rsi.py": "b137370773d8ed97b2213a38929685ae3c17c846ee2a1f92e3dce5fe260e52cb",
+      "spec.py": "e5e2473851c1dea7a0ceffad460ef83d561343ce9e34701244fab1dc465e43db",
+      "transfer.py": "63e419656005f49f705e942936ae22559016d75a59718ec1eeb2fa1eb5ec96f2"
+    },
+    "versions": {
+      "mujoco": "3.3.0",
+      "robosuite": "1.4.0",
+      "numpy": "1.26.4"
+    },
+    "python": "3.12",
+    "platform": "win32"
+  },
+  "split": "development",
+  "participant_sha256": {
+    "<project>/participant/skills.py": "c829159ce7d7de59088657e9b21a9e301e16cfb40dbcfbafe8cb7ffee4f997fe",
+    "<project>/participant/agent.py": "36fe8ff1f9b9364c1c265f579632809350d054939c9fcc505efe2bb0e1bad2ef",
+    "<project>/benchmarks/manufacturing-picl-v2.json": "642a06754a176b463096e27dabb854bb00f1f45238b43d2ccf52e34053470771"
+  },
+  "entrypoint_sha256": {
+    "skills": "c829159ce7d7de59088657e9b21a9e301e16cfb40dbcfbafe8cb7ffee4f997fe",
+    "agent": "36fe8ff1f9b9364c1c265f579632809350d054939c9fcc505efe2bb0e1bad2ef"
+  },
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "win32",
+    "source_path": null,
+    "versions": {
+      "mujoco": "3.3.0",
+      "robosuite": "1.4.0",
+      "numpy": "1.26.4",
+      "torch": "2.14.1",
+      "imageio": "2.38.1"
+    },
+    "control": "Panda OSC_POSE, normalized 7D, 20Hz"
+  },
+  "trust": "trusted Python plugins; not an adversarial sandbox",
+  "status": "completed"
+}

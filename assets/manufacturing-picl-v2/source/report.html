@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Physical interaction source collection</title>
+<style>body{font:16px system-ui;max-width:1000px;margin:30px auto;padding:0 18px;
+background:#fafafa;color:#20303c}p{line-height:1.6}video{width:100%;max-height:540px}
+select{font:inherit;padding:8px}pre{white-space:pre-wrap}</style>
+<h1>Physical interaction source collection</h1><p>Task success: 0/2.</p>
+<p>Task completion with state observations and participant-supplied policy code.
+Context comparisons use separate paired transfer reports.</p>
+<p>Raw wrist load is diagnostic unless a task limit and rationale are declared.</p>
+<label>Episode <select id="episode"></select></label><pre id="description"></pre>
+<video id="video" controls></video><p><a id="result">Episode JSON</a> ·
+<a href="summary.json">Summary</a> · <a href="manifest.json">Protocol</a></p>
+<script id="data" type="application/json">[{"id": "development-w1-nut_round-0", "task": "nut_round", "instruction": "Place the round nut onto its shaft and release it.", "success": false, "steps": 651, "termination": "agent_stop", "error": null, "peak_wrist_force_N": 386.08066512387086, "task_force_constraint_success": null, "metric_version": "eah.metrics.v2", "evaluation_metrics": {"lateral_error_m": 0.000695575395725767, "object_height_m": 0.9005998153817681, "released": true}}, {"id": "development-w0-nut_round-0", "task": "nut_round", "instruction": "Place the round nut onto its shaft and release it.", "success": false, "steps": 631, "termination": "agent_stop", "error": null, "peak_wrist_force_N": 797.6788011778839, "task_force_constraint_success": null, "metric_version": "eah.metrics.v2", "evaluation_metrics": {"lateral_error_m": 0.0007195190931409809, "object_height_m": 0.9000594717959832, "released": true}}]</script><script>
+const data=JSON.parse(document.getElementById('data').textContent);
+const select=document.getElementById('episode');
+data.forEach((r,i)=>{const o=document.createElement('option');
+o.value=i;o.textContent=r.id;select.append(o)});
+function show(){const r=data[Number(select.value)];
+document.getElementById('description').textContent=JSON.stringify(r,null,2);
+document.getElementById('video').src=`${r.id}/rollout.mp4`;
+document.getElementById('result').href=`${r.id}/result.json`;}
+select.addEventListener('change',show);show();</script></html>

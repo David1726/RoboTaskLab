@@ -1,0 +1,681 @@
+{
+  "schema": "eah.transfer_report.v1",
+  "conditions": {
+    "no_context": {
+      "episodes": 6,
+      "successes": 3,
+      "success_rate": 0.5,
+      "paired_success_delta": 0.0,
+      "mean_steps": 378.5,
+      "mean_skill_calls": 1.0,
+      "implementation_errors": 0,
+      "mean_steps_on_success": 354.3333333333333,
+      "paired_successful_cases": 3,
+      "mean_step_delta_on_paired_success": 0.0,
+      "negative_transfer_cases": 0,
+      "positive_transfer_cases": 0,
+      "pairs": [
+        {
+          "case_id": "evaluation-w0-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        }
+      ],
+      "paired_success_delta_ci95": {
+        "estimate": 0.0,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "physical_icl_score": 0.625,
+      "force_qualified_success_rate": null,
+      "max_sampled_peak_wrist_force_N": 13.262773615248317
+    },
+    "source_context": {
+      "episodes": 6,
+      "successes": 4,
+      "success_rate": 0.6666666666666666,
+      "paired_success_delta": 0.16666666666666666,
+      "mean_steps": 345.3333333333333,
+      "mean_skill_calls": 1.0,
+      "implementation_errors": 0,
+      "mean_steps_on_success": 305.0,
+      "paired_successful_cases": 3,
+      "mean_step_delta_on_paired_success": -47.333333333333336,
+      "negative_transfer_cases": 0,
+      "positive_transfer_cases": 1,
+      "pairs": [
+        {
+          "case_id": "evaluation-w0-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": -5,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": -5,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 68,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": -21,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": -116,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 1,
+          "step_delta": -120,
+          "skill_call_delta": 0
+        }
+      ],
+      "paired_success_delta_ci95": {
+        "estimate": 0.125,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "physical_icl_score": 0.75,
+      "force_qualified_success_rate": null,
+      "max_sampled_peak_wrist_force_N": 20.260431230410674
+    },
+    "action_effect": {
+      "episodes": 6,
+      "successes": 4,
+      "success_rate": 0.6666666666666666,
+      "paired_success_delta": 0.16666666666666666,
+      "mean_steps": 345.3333333333333,
+      "mean_skill_calls": 1.0,
+      "implementation_errors": 0,
+      "mean_steps_on_success": 305.0,
+      "paired_successful_cases": 3,
+      "mean_step_delta_on_paired_success": -47.333333333333336,
+      "negative_transfer_cases": 0,
+      "positive_transfer_cases": 1,
+      "pairs": [
+        {
+          "case_id": "evaluation-w0-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": -5,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": -5,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 68,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": -21,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": -116,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 1,
+          "step_delta": -120,
+          "skill_call_delta": 0
+        }
+      ],
+      "paired_success_delta_ci95": {
+        "estimate": 0.125,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "physical_icl_score": 0.75,
+      "force_qualified_success_rate": null,
+      "max_sampled_peak_wrist_force_N": 20.260431230410674
+    },
+    "language_only": {
+      "episodes": 6,
+      "successes": 3,
+      "success_rate": 0.5,
+      "paired_success_delta": 0.0,
+      "mean_steps": 378.5,
+      "mean_skill_calls": 1.0,
+      "implementation_errors": 0,
+      "mean_steps_on_success": 354.3333333333333,
+      "paired_successful_cases": 3,
+      "mean_step_delta_on_paired_success": 0.0,
+      "negative_transfer_cases": 0,
+      "positive_transfer_cases": 0,
+      "pairs": [
+        {
+          "case_id": "evaluation-w0-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        }
+      ],
+      "paired_success_delta_ci95": {
+        "estimate": 0.0,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "physical_icl_score": 0.625,
+      "force_qualified_success_rate": null,
+      "max_sampled_peak_wrist_force_N": 13.262773615248317
+    },
+    "unrelated_physics": {
+      "episodes": 6,
+      "successes": 3,
+      "success_rate": 0.5,
+      "paired_success_delta": 0.0,
+      "mean_steps": 362.6666666666667,
+      "mean_skill_calls": 1.0,
+      "implementation_errors": 0,
+      "mean_steps_on_success": 346.0,
+      "paired_successful_cases": 3,
+      "mean_step_delta_on_paired_success": -8.333333333333334,
+      "negative_transfer_cases": 0,
+      "positive_transfer_cases": 0,
+      "pairs": [
+        {
+          "case_id": "evaluation-w0-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": -119,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": -17,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 56,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": 16,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": -24,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": -7,
+          "skill_call_delta": 0
+        }
+      ],
+      "paired_success_delta_ci95": {
+        "estimate": 0.0,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "physical_icl_score": 0.625,
+      "force_qualified_success_rate": null,
+      "max_sampled_peak_wrist_force_N": 22.658493639326775
+    },
+    "shuffled_feedback": {
+      "episodes": 6,
+      "successes": 3,
+      "success_rate": 0.5,
+      "paired_success_delta": 0.0,
+      "mean_steps": 378.5,
+      "mean_skill_calls": 1.0,
+      "implementation_errors": 0,
+      "mean_steps_on_success": 354.3333333333333,
+      "paired_successful_cases": 3,
+      "mean_step_delta_on_paired_success": 0.0,
+      "negative_transfer_cases": 0,
+      "positive_transfer_cases": 0,
+      "pairs": [
+        {
+          "case_id": "evaluation-w0-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w0-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-0",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_round-0",
+          "task_id": "insert_round",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-stack-0",
+          "task_id": "stack",
+          "task_family": "stacking",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        },
+        {
+          "case_id": "evaluation-w1-insert_square-0",
+          "task_id": "insert_square",
+          "task_family": "insertion",
+          "world_id": "world-1",
+          "success_delta": 0,
+          "step_delta": 0,
+          "skill_call_delta": 0
+        }
+      ],
+      "paired_success_delta_ci95": {
+        "estimate": 0.0,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "physical_icl_score": 0.625,
+      "force_qualified_success_rate": null,
+      "max_sampled_peak_wrist_force_N": 13.262773615248317
+    }
+  },
+  "limitation": "Frozen rule/system-identification baseline; no neural ICL claim. State observations, limited manufacturing tasks and finite physical worlds.",
+  "evaluation_track": "physical_icl",
+  "generalization_axis": "task_family",
+  "physical_icl": {
+    "no_context": {
+      "world_family_macro_success": 0.625,
+      "by_world_family": {
+        "world-0": {
+          "insertion": 0.0,
+          "stacking": 1.0
+        },
+        "world-1": {
+          "insertion": 0.5,
+          "stacking": 1.0
+        }
+      },
+      "paired_macro_delta": 0.0,
+      "paired_macro_delta_ci95": {
+        "estimate": 0.0,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "force_qualified_success_rate": null,
+      "force_assessed_episodes": 0,
+      "force_measured_episodes": 6,
+      "mean_sampled_peak_wrist_force_N": 9.600600289233755,
+      "max_sampled_peak_wrist_force_N": 13.262773615248317,
+      "force_metric_note": "Raw 20Hz wrist-load diagnostic. Qualification requires an explicit comparable task specification; legacy illustrative limits are unassessed."
+    },
+    "source_context": {
+      "world_family_macro_success": 0.75,
+      "by_world_family": {
+        "world-0": {
+          "insertion": 0.0,
+          "stacking": 1.0
+        },
+        "world-1": {
+          "insertion": 1.0,
+          "stacking": 1.0
+        }
+      },
+      "paired_macro_delta": 0.125,
+      "paired_macro_delta_ci95": {
+        "estimate": 0.125,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "force_qualified_success_rate": null,
+      "force_assessed_episodes": 0,
+      "force_measured_episodes": 6,
+      "mean_sampled_peak_wrist_force_N": 10.056672481206117,
+      "max_sampled_peak_wrist_force_N": 20.260431230410674,
+      "force_metric_note": "Raw 20Hz wrist-load diagnostic. Qualification requires an explicit comparable task specification; legacy illustrative limits are unassessed."
+    },
+    "action_effect": {
+      "world_family_macro_success": 0.75,
+      "by_world_family": {
+        "world-0": {
+          "insertion": 0.0,
+          "stacking": 1.0
+        },
+        "world-1": {
+          "insertion": 1.0,
+          "stacking": 1.0
+        }
+      },
+      "paired_macro_delta": 0.125,
+      "paired_macro_delta_ci95": {
+        "estimate": 0.125,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "force_qualified_success_rate": null,
+      "force_assessed_episodes": 0,
+      "force_measured_episodes": 6,
+      "mean_sampled_peak_wrist_force_N": 10.056672481206117,
+      "max_sampled_peak_wrist_force_N": 20.260431230410674,
+      "force_metric_note": "Raw 20Hz wrist-load diagnostic. Qualification requires an explicit comparable task specification; legacy illustrative limits are unassessed."
+    },
+    "language_only": {
+      "world_family_macro_success": 0.625,
+      "by_world_family": {
+        "world-0": {
+          "insertion": 0.0,
+          "stacking": 1.0
+        },
+        "world-1": {
+          "insertion": 0.5,
+          "stacking": 1.0
+        }
+      },
+      "paired_macro_delta": 0.0,
+      "paired_macro_delta_ci95": {
+        "estimate": 0.0,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "force_qualified_success_rate": null,
+      "force_assessed_episodes": 0,
+      "force_measured_episodes": 6,
+      "mean_sampled_peak_wrist_force_N": 9.600600289233755,
+      "max_sampled_peak_wrist_force_N": 13.262773615248317,
+      "force_metric_note": "Raw 20Hz wrist-load diagnostic. Qualification requires an explicit comparable task specification; legacy illustrative limits are unassessed."
+    },
+    "unrelated_physics": {
+      "world_family_macro_success": 0.625,
+      "by_world_family": {
+        "world-0": {
+          "insertion": 0.0,
+          "stacking": 1.0
+        },
+        "world-1": {
+          "insertion": 0.5,
+          "stacking": 1.0
+        }
+      },
+      "paired_macro_delta": 0.0,
+      "paired_macro_delta_ci95": {
+        "estimate": 0.0,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "force_qualified_success_rate": null,
+      "force_assessed_episodes": 0,
+      "force_measured_episodes": 6,
+      "mean_sampled_peak_wrist_force_N": 11.123809452037433,
+      "max_sampled_peak_wrist_force_N": 22.658493639326775,
+      "force_metric_note": "Raw 20Hz wrist-load diagnostic. Qualification requires an explicit comparable task specification; legacy illustrative limits are unassessed."
+    },
+    "shuffled_feedback": {
+      "world_family_macro_success": 0.625,
+      "by_world_family": {
+        "world-0": {
+          "insertion": 0.0,
+          "stacking": 1.0
+        },
+        "world-1": {
+          "insertion": 0.5,
+          "stacking": 1.0
+        }
+      },
+      "paired_macro_delta": 0.0,
+      "paired_macro_delta_ci95": {
+        "estimate": 0.0,
+        "lower": null,
+        "upper": null,
+        "status": "insufficient_worlds",
+        "world_clusters": 2,
+        "method": "equal family weight within world; world-cluster bootstrap",
+        "warning": "Suppress intervals with fewer than five worlds or degenerate resampling. This display guard is not a statistical sample-size guarantee. Any displayed interval remains exploratory, not a significance test."
+      },
+      "force_qualified_success_rate": null,
+      "force_assessed_episodes": 0,
+      "force_measured_episodes": 6,
+      "mean_sampled_peak_wrist_force_N": 9.600600289233755,
+      "max_sampled_peak_wrist_force_N": 13.262773615248317,
+      "force_metric_note": "Raw 20Hz wrist-load diagnostic. Qualification requires an explicit comparable task specification; legacy illustrative limits are unassessed."
+    }
+  },
+  "source_cost": {
+    "episodes": 2,
+    "steps": 1282,
+    "skill_calls": 4
+  }
+}

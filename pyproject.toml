@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "embodied-agent-harness"
+version = "0.6.0"
+description = "Two-file embodied agent benchmarks, skill refinement and cross-task context experiments"
+license = "MIT"
+authors = [{name = "David1726"}]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.9"]
+manufacturing = [
+  "mujoco==3.3.0", "robosuite==1.4.0", "numpy==1.26.4", "numba==0.61.2",
+  "matplotlib==3.9.4", "imageio", "imageio-ffmpeg", "pillow", "termcolor",
+]
+preview = [
+  "mujoco==3.3.0", "robosuite==1.4.0", "numpy==1.26.4", "numba==0.61.2",
+  "bddl==1.0.1", "gym==0.25.2", "easydict", "pyyaml", "future", "termcolor",
+  "matplotlib==3.9.4", "imageio", "imageio-ffmpeg", "pillow", "torch==2.14.1",
+]
+
+[project.scripts]
+eah = "embodied_agent_harness.cli:main"
+eah-rsi = "embodied_agent_harness.libero_demo:main"
+eah-bench = "embodied_agent_harness.benchmark:main"
+eah-transfer = "embodied_agent_harness.transfer:main"
+eah-report = "embodied_agent_harness.report:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
