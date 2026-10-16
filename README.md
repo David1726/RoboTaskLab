@@ -1,7 +1,8 @@
-# Embodied Agent Harness
+# RoboTaskLab
 
-Embodied Agent Harness runs robotic agents in simulation and measures how they
-transfer physical interaction experience across tasks.
+RoboTaskLab helps researchers getting started with agentic robotics develop
+agents and skills in simulation. It includes benchmarks for task execution and
+physical in-context learning (Physical ICL) across tasks.
 
 You implement two files: `participant/agent.py` chooses skills and
 parameters; `participant/skills.py` executes robot actions. The harness supplies
@@ -15,6 +16,10 @@ scenes, language goals, budgets, source context, scoring, trajectories and video
 |---|---|
 | Agent | Task completion under randomized layouts and physical parameters |
 | Physical ICL | Paired transfer from source experience to different task families with frozen agent and skill code |
+
+The Physical ICL benchmark evaluates transfer from source-task trajectories and
+failure experience to different target task families. Six context conditions
+share matched target initializations while agent and skill code remain frozen.
 
 Manufacturing tasks include round/square insertion, round/square nut placement
 and stacking with a Panda robot. Parameters vary actuator gain, object mass and
